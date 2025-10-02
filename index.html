@@ -3,30 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RigaGlow – Hudsalong • Fotvård • Massage</title>
-  <meta name="description" content="RigaGlow hudsalong: fotvård, massage, vaxning, tejpning. Boka tid online.">
+  <title>RigaGlow – Hudsalong • Fotvård • Massage • Vaxning</title>
+  <meta name="description" content="RigaGlow hudsalong: sportmassage, fotvård (friskvård), vaxning, tejpning. Boka tid online.">
+
   <style>
     :root{
       --bg:#0b0d12; --fg:#ffffff; --muted:#cfd3db;
-      --gold:#d4af37; --edge:#1b2030; --card:#121622; --max:1080px
+      --gold:#f3c739; --edge:#1b2030; --card:#121622; --max:1080px
     }
     *,*::before,*::after{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif}
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
-
     .wrap{max-width:var(--max);margin:auto;padding:0 20px}
+
     .btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;
-      background:linear-gradient(180deg,#ffe27a,#f3c739);color:#1a1a1a;box-shadow:0 8px 24px rgba(244,204,63,.25);
+      background:linear-gradient(180deg,#ffe27a,var(--gold));color:#1a1a1a;box-shadow:0 8px 24px rgba(244,204,63,.25);
       transition:transform .15s ease, box-shadow .15s ease}
     .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(244,204,63,.35)}
-    .btn.outline{background:transparent;color:#ffe27a;border:2px solid #f3c739}
+    .btn.outline{background:transparent;color:#ffe27a;border:2px solid var(--gold)}
 
-    /* HERO */
-    header.hero{
-      position:relative;isolation:isolate;min-height:72vh;display:grid;place-items:center;text-align:center;
-      padding:80px 0;border-bottom:1px solid var(--edge);overflow:hidden
-    }
+    header.hero{position:relative;isolation:isolate;min-height:72vh;display:grid;place-items:center;text-align:center;
+      padding:80px 0;border-bottom:1px solid var(--edge);overflow:hidden}
     .hero::before{
       content:"";position:absolute;inset:-10%;z-index:-2;
       background:
@@ -36,9 +34,10 @@
       filter:blur(2px)
     }
     .hero::after{
-      content:"";position:absolute;inset:0;z-index:-1;opacity:.20;
-      background:url("hero-bg.jpg") center/cover no-repeat; /* можно не загружать */
-      mix-blend-mode:screen
+      content:"";position:absolute;inset:-15% -10% auto -10%;height:420px;z-index:-1;
+      background:radial-gradient(60% 60% at 50% 30%, rgba(212,175,55,.22), transparent 60%),
+                 radial-gradient(40% 40% at 70% 20%, rgba(240,212,106,.18), transparent 60%);
+      filter:blur(30px)
     }
     .logo{width:min(280px,60vw);margin:0 auto 18px;filter:drop-shadow(0 8px 30px rgba(0,0,0,.45))}
     .title{font-size:44px;margin:6px 0 10px;font-weight:800;letter-spacing:.3px}
@@ -54,13 +53,11 @@
     .muted{color:var(--muted)}
     .pill{display:inline-block;padding:4px 10px;border:1px solid var(--edge);border-radius:999px;color:var(--muted);font-size:13px}
 
-    /* Price list */
     .price-row{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px dashed #2a3147}
     .price-row:last-child{border-bottom:none}
     .price-name{font-weight:600}
     .price{color:#ffe27a}
 
-    /* Footer & sticky */
     .sticky{position:sticky;bottom:0;background:rgba(11,13,18,.75);backdrop-filter:blur(6px);
       border-top:1px solid var(--edge);padding:10px 16px}
     .sticky .wrap{display:flex;justify-content:center}
@@ -75,91 +72,107 @@
     <div class="wrap">
       <img src="logo.jpg" alt="RigaGlow logotyp" class="logo">
       <h1 class="title">RigaGlow Hudsalong</h1>
-      <p class="lead">Fotvård (friskvård), kropp & ansiktsmassage, vaxning och tejpning i hemtrevlig studio. Hygien, noggrannhet och varmt bemötande.</p>
+      <p class="lead">Sportmassage, fotvård (friskvård), vaxning och tejpning i hemtrevlig studio. Medicinsk kunskap, hygien och omsorg i varje detalj.</p>
       <div class="btnrow">
-        <!-- 👉 ВСТАВЬ СЮДА СВОЮ ССЫЛКУ BokaDirekt -->
         <a class="btn" href="https://www.bokadirekt.se/DITT-LÄNK" target="_blank" rel="noopener">Boka tid</a>
-        <a class="btn outline" href="#prices">Se priser</a>
+        <a class="btn outline" href="#services">Se tjänster</a>
       </div>
     </div>
   </header>
 
-  <!-- ABOUT -->
+  <!-- OM MIG -->
   <section id="about">
     <div class="wrap grid cols-2">
       <div class="card">
         <h2>Om mig</h2>
-        <p>Med medicinsk utbildning i grunden erbjuder jag behandlingar som förenar hälsa och välbefinnande. 
-Fokus ligger på hygien, noggrannhet och individuellt anpassad vård för fötter, hud och kropp. 
-Här möts medicinsk kunskap och omtanke i varje detalj.</p>
+        <p>Med medicinsk utbildning i grunden erbjuder jag behandlingar som förenar hälsa och välbefinnande.
+        Fokus ligger på hygien, noggrannhet och individuellt anpassad vård för fötter, hud och kropp.
+        Här möts medicinsk kunskap och omtanke i varje detalj.</p>
       </div>
       <div class="grid">
-        <div class="card"><h3>Öppetider</h3><p class="muted">Mån–Fre 10:00–19:00 · Lör enligt överenskommelse.</p></div>
+        <div class="card"><h3>Öppettider</h3><p class="muted">Mån–Fre 10:00–19:00 · Lör enligt överenskommelse.</p></div>
+        <div class="card"><h3>Plats</h3><p class="muted">Hemstudio (adress delas vid bokning). Gratis parkering i närheten.</p></div>
         <div class="card"><h3>Språk</h3><p class="muted">Svenska · Русский · English</p></div>
-        <div class="card"><h3>Plats</h3><p class="muted">Hemstudio. Gratis parkering i närheten.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- TJÄNSTER – КАРТОЧКИ -->
   <section id="services">
     <div class="wrap">
       <h2>Tjänster</h2>
       <div class="grid cols-3">
         <div class="card">
-          <h3>Medicinsk fotvård</h3>
-          <p class="muted">Liktornar, hälsprickor, nagel- & hudvård. Skonsamt och hygieniskt.</p>
-          <span class="pill">Friskvård</span>
+          <h3>Sportmassage</h3>
+          <p class="muted">Djup och intensiv behandling som minskar spänningar, påskyndar återhämtning och förbättrar rörlighet.</p>
+          <span class="pill">50 min · 899 kr</span>
         </div>
         <div class="card">
-          <h3>Massage</h3>
-          <p class="muted">Avslappnande helkropp, rygg/nacke och ansiktsmassage – 30–90 min.</p>
+          <h3>Fotvård</h3>
+          <p class="muted">Skonsam fotvård (friskvård): hud & naglar, liktornar, hälsprickor. Hygien i fokus.</p>
           <span class="pill">Individanpassat</span>
         </div>
         <div class="card">
-          <h3>Vaxning & tejpning</h3>
-          <p class="muted">Snabb vaxning (dam/herr). Kinesiotejp för avlastning och stöd.</p>
-          <span class="pill">Diskret & noggrant</span>
+          <h3>Vaxning & Tejpning</h3>
+          <p class="muted">Effektiv vaxning för ansikte och kropp. Kinesiotejp för avlastning och stöd.</p>
+          <span class="pill">Dam & Herr</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICES -->
-  <section id="prices">
-    <div class="wrap">
-      <h2>Priser</h2>
+  <!-- SPORTMASSAGE — РАСШИРЕННЫЙ БЛОК -->
+  <section id="sportmassage">
+    <div class="wrap grid cols-2">
       <div class="card">
-        <!-- ✍️ Отредактируй суммы -->
-        <div class="price-row">
-          <div class="price-name">Fotvård – klassisk (60 min)</div><div class="price">600 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Fotvård – medicinsk (75–90 min)</div><div class="price">750 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Massage rygg/nacke (30 min)</div><div class="price">350 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Massage helkropp (60 min)</div><div class="price">600 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Ansiktsmassage (30 min)</div><div class="price">300 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Vaxning (små zoner)</div><div class="price">fr. 250 kr</div>
-        </div>
-        <div class="price-row">
-          <div class="price-name">Tejpning</div><div class="price">fr. 150 kr</div>
-        </div>
+        <h2>Sportmassage</h2>
+        <p><b>Sportmassage</b> är en djup och intensiv behandlingsform som minskar muskelspänningar, påskyndar återhämtning efter fysisk belastning och ökar kroppens tonus. Den förbättrar blodcirkulationen, rörligheten i lederna, hjälper till att transportera bort slaggprodukter och motverkar muskulära låsningar.</p>
+        <p>Passar både för dig som tränar aktivt och för dig som blir trött av stillasittande arbete eller vill återfå energi.</p>
+        <p class="muted"><b>Rekommendation:</b> en kur med flera behandlingar för bästa resultat.</p>
+        <div class="price-row"><div class="price-name">50 min</div><div class="price">899 kr</div></div>
+        <div style="margin-top:16px"><a class="btn" href="https://www.bokadirekt.se/DITT-LÄNK" target="_blank" rel="noopener">Boka sportmassage</a></div>
+      </div>
+      <div class="card">
+        <h2>Vaxning – info</h2>
+        <p><b>Vaxning</b> är en effektiv och skonsam metod med varmt vax. För optimalt resultat bör håret vara <b>5–7 mm</b>.</p>
+        <p>Jag använder endast professionella produkter. Engångsmaterial vid varje behandling, och noggrann desinfektion av verktyg och arbetsytor.</p>
+        <ul class="muted" style="margin:0;padding-left:18px">
+          <li>Slät hud i <b>3–4 veckor</b></li>
+          <li>Mjukare hår som växer <b>långsammare</b></li>
+          <li>Passar flera <b>ansikts- och kroppsdelar</b></li>
+        </ul>
+        <div style="margin-top:16px"><a class="btn outline" href="#wax-prices">Se vaxningspriser</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRISER VAXNING -->
+  <section id="wax-prices">
+    <div class="wrap">
+      <h2>Vaxning – priser</h2>
+      <div class="card">
+        <div class="price-row"><div class="price-name">Vaxning av överläpp (10 min)</div><div class="price">149 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av överläpp och haka (15 min)</div><div class="price">199 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av armar (30 min)</div><div class="price">399 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av halva armen (20 min)</div><div class="price">199 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av armhålor (20 min)</div><div class="price">299 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av bikinilinje (20 min)</div><div class="price">299 kr</div></div>
+        <div class="price-row"><div class="price-name">Brasiliansk vaxning (45 min)</div><div class="price">599 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av halva ben inkl. knä (30 min)</div><div class="price">399 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av halva ben inkl. bikinilinje (40 min)</div><div class="price">599 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av hela ben (40 min)</div><div class="price">659 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av hela ben inkl. bikinilinje (50 min)</div><div class="price">799 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av hela ben inkl. brasiliansk (60 min)</div><div class="price">999 kr</div></div>
+        <div class="price-row"><div class="price-name">Vaxning av mage (25 min)</div><div class="price">259 kr</div></div>
+
         <div style="text-align:center;margin-top:18px">
-          <a class="btn" href="https://www.bokadirekt.se/DITT-LÄNK" target="_blank" rel="noopener">Boka tid</a>
+          <a class="btn" href="https://www.bokadirekt.se/DITT-LÄNK" target="_blank" rel="noopener">Boka vaxning</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- KONTAKT -->
   <section id="contact">
     <div class="wrap grid cols-2">
       <div class="card">
@@ -177,7 +190,7 @@ Här möts medicinsk kunskap och omtanke i varje detalj.</p>
     </div>
   </section>
 
-  <!-- Sticky CTA -->
+  <!-- STICKY CTA -->
   <div class="sticky">
     <div class="wrap">
       <a class="btn" href="https://www.bokadirekt.se/DITT-LÄNK" target="_blank" rel="noopener">Boka tid</a>
