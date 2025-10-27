@@ -54,47 +54,46 @@
   font-weight: 600;
   color: #ffe27a;
 }
-    .behandlingar-section {
-  padding: 50px 0;
+  /* BEHANDLINGAR SECTION */
+.behandlingar {
+  padding: 40px 0;
 }
 
-.section-title {
-  font-size: 2.2em;
-  text-align: center;
+.behandlingar h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #fff;
+}
+
+.behandlingar-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 колонки: картинка + текст */
+  gap: 30px;
   margin-bottom: 40px;
-  font-weight: bold;
+  align-items: center;
 }
 
-.behandling {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  gap: 20px;
-}
-
-.behandling-image {
-  flex: 1;
-}
-
-.behandling-image img {
+.behandlingar-list img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.behandling-text {
-  flex: 2;
-}
-
-.behandling-text h3 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
+.behandlingar-text h3 {
+  font-size: 20px;
   font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.behandling-text p {
+.behandlingar-text p {
+  font-size: 16px;
   line-height: 1.6;
-  color: #333;
+  color: #ddd;
 }
 
     /* HERO */
