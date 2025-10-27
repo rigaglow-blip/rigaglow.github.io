@@ -29,6 +29,31 @@
       transition:transform .15s ease, box-shadow .15s ease}
     .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(226,193,94,.35)}
     .btn.dark{background:#2b261f;color:#ffeaa0;border:1px solid #3a332a}
+    .price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255,255,255,0.3);
+  padding: 8px 0;
+}
+
+.price-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffe27a;
+}
 
     /* HERO */
     header.hero{
@@ -359,93 +384,105 @@
 </section>
 
   <!-- PRICES -->
-  <section id="prices">
+<section id="prices">
   <div class="wrap">
     <h2>Priser</h2>
     <div class="price-list">
 
-      <div class="price-item">
-        <span>Fotvård – klassisk (60 min)</span>
-        <span>600 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Fotvård – medicinsk (75–90 min)</span>
-        <span>750 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Massage rygg/nacke (30 min)</span>
-        <span>350 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Massage helkropp (60 min)</span>
-        <span>600 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Ansiktsmassage (30 min)</span>
-        <span>300 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Sportmassage (60 min)</span>
-        <span>600 kr</span>
-      </div>
-      <div class="price-item">
-        <span>Gua Sha massage (30 min)</span>
-        <span>350 kr</span>
+      <div class="price-row">
+        <span class="price-name">Fotvård – klassisk (60 min)</span>
+        <span class="price">600 kr</span>
       </div>
 
-      <h3>Vaxning</h3>
-      <div class="price-item">
-        <span>Överläpp</span>
-        <span>149 kr</span>
+      <div class="price-row">
+        <span class="price-name">Fotvård – medicinsk (75–90 min)</span>
+        <span class="price">750 kr</span>
       </div>
-      <div class="price-item">
-        <span>Överläpp + haka</span>
-        <span>199 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Massage rygg/nacke (30 min)</span>
+        <span class="price">350 kr</span>
       </div>
-      <div class="price-item">
-        <span>Armar (hela)</span>
-        <span>399 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Massage helkropp (60 min)</span>
+        <span class="price">600 kr</span>
       </div>
-      <div class="price-item">
-        <span>Armar (halva)</span>
-        <span>199 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Ansiktsmassage (30 min)</span>
+        <span class="price">300 kr</span>
       </div>
-      <div class="price-item">
-        <span>Armhålor</span>
-        <span>299 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Överläpp</span>
+        <span class="price">149 kr</span>
       </div>
-      <div class="price-item">
-        <span>Bikinilinje</span>
-        <span>299 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Överläpp + haka</span>
+        <span class="price">199 kr</span>
       </div>
-      <div class="price-item">
-        <span>Brasiliansk</span>
-        <span>599 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Armar (hela)</span>
+        <span class="price">399 kr</span>
       </div>
-      <div class="price-item">
-        <span>Ben (halva) inkl. knä</span>
-        <span>399 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Armar (halva)</span>
+        <span class="price">199 kr</span>
       </div>
-      <div class="price-item">
-        <span>Ben (halva) + bikinilinje</span>
-        <span>599 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Armhålor</span>
+        <span class="price">299 kr</span>
       </div>
-      <div class="price-item">
-        <span>Ben (hela)</span>
-        <span>659 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Bikinilinje</span>
+        <span class="price">299 kr</span>
       </div>
-      <div class="price-item">
-        <span>Ben (hela) + bikinilinje</span>
-        <span>799 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Brasiliansk</span>
+        <span class="price">599 kr</span>
       </div>
-      <div class="price-item">
-        <span>Ben (hela) + brasiliansk</span>
-        <span>999 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Ben (halva) inkl. knä</span>
+        <span class="price">399 kr</span>
       </div>
-      <div class="price-item">
-        <span>Mage</span>
-        <span>259 kr</span>
+
+      <div class="price-row">
+        <span class="price-name">Ben (halva) + bikinilinje</span>
+        <span class="price">599 kr</span>
       </div>
+
+      <div class="price-row">
+        <span class="price-name">Ben (hela)</span>
+        <span class="price">659 kr</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price-name">Ben (hela) + bikinilinje</span>
+        <span class="price">799 kr</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price-name">Ben (hela) + brasiliansk</span>
+        <span class="price">999 kr</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price-name">Mage</span>
+        <span class="price">259 kr</span>
+      </div>
+
+    </div>
+    <a href="https://www.bokadirekt.se/places/rigaglow-133007" class="btn">Boka tid</a>
+  </div>
+</section>
 
     </div>
   </div>
