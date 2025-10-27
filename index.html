@@ -54,6 +54,48 @@
   font-weight: 600;
   color: #ffe27a;
 }
+    .behandlingar-section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.behandling {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.behandling-image {
+  flex: 1;
+}
+
+.behandling-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.behandling-text {
+  flex: 2;
+}
+
+.behandling-text h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.behandling-text p {
+  line-height: 1.6;
+  color: #333;
+}
 
     /* HERO */
     header.hero{
@@ -246,140 +288,109 @@
   </section>
 
 <!-- TREATMENTS / BEHANDLINGAR -->
-<section id="behandlingar">
-  <div class="wrap">
-    <h2>Behandlingar</h2>
+<section id="behandlingar" class="behandlingar-section">
+  <div class="container">
+    <h2 class="section-title">BEHANDLINGAR</h2>
 
-    <style>
-      /* локально (только для этого блока) — аккуратная сетка и типографика */
-      #behandlingar .treatments {display:grid; gap:28px; grid-template-columns: 1fr; }
-      #behandlingar .treatment {display:grid; gap:18px; grid-template-columns: 160px 1fr; align-items:start;}
-      #behandlingar figure{margin:0; border-radius:12px; overflow:hidden; background:#222; box-shadow:0 2px 10px rgba(0,0,0,.25)}
-      #behandlingar img{display:block; width:100%; height:160px; object-fit:cover;}
-      #behandlingar h3{margin:0 0 6px 0}
-      #behandlingar p{margin:0 0 10px 0}
-      #behandlingar ul{margin:8px 0 0 0; padding-left:18px}
-      @media (max-width: 820px){
-        #behandlingar .treatment{grid-template-columns: 1fr}
-        #behandlingar img{height:200px}
-      }
-    </style>
-
-    <div class="treatments">
-
-      <!-- Medicinsk fotvård -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Medicinsk fotvård hos podolog"></figure>
-        <div>
-          <h3>Medicinsk fotvård</h3>
-          <p>Professionell fotvårdsbehandling som fokuserar på att lösa problem och återställa komforten. Behandlingen omfattar borttagning av förhårdnader, liktornar och sprickor, försiktig korrigering av lätt inåtväxande naglar samt förebyggande av svampinfektioner. Allt utförs med medicinsk noggrannhet och hög hygiennivå.</p>
-          <p><strong>Säkerhet:</strong> Instrumenten genomgår flerstegsdesinfektion och sterilisering enligt medicinska standarder; alla förbrukningsmaterial är engångsartiklar. Resultatet är lätta, välvårdade och friska fötter.</p>
-        </div>
+    <!-- Sportmassage -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/sportmassage.jpg" alt="Sportmassage"></div>
+      <div class="behandling-text">
+        <h3>Sportmassage – djup och intensiv behandling</h3>
+        <p>Sportmassage är en djup och intensiv massageform som lindrar muskelspänningar, påskyndar återhämtning efter fysisk belastning och höjer kroppens tonus. Den ökar blodcirkulationen, förbättrar ledrörligheten och förebygger muskelknutor.</p>
       </div>
-
-      <!-- Klassisk helkroppsmassage -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Klassisk svensk helkroppsmassage"></figure>
-        <div>
-          <h3>Klassisk helkroppsmassage</h3>
-          <p>Mjuka men djupa grepp som förbättrar cirkulationen, löser upp spänningar och återställer kroppens energi. Behandlingen minskar stress och trötthet, avlastar muskler och leder, förbättrar blod- och lymfcirkulation och stärker det allmänna välbefinnandet.</p>
-        </div>
-      </div>
-
-      <!-- Klassisk rygg/axlar -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Rygg- och axelmassage"></figure>
-        <div>
-          <h3>Massage rygg/axlar</h3>
-          <p>En kortare, fokuserad variant för dig som behöver snabb lindring i rygg och axlar. Ger skön avspänning och förbättrad rörlighet i vardagen.</p>
-        </div>
-      </div>
-
-      <!-- Sportmassage -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Sportmassage"></figure>
-        <div>
-          <h3>Sportmassage</h3>
-          <p>Djup och intensiv behandling som lindrar muskelspänningar, påskyndar återhämtningen efter belastning och höjer kroppens tonus. Hjälper blodcirkulationen, förbättrar ledrörlighet, avlägsnar metabola restprodukter och förebygger muskelknutor. Passar både för aktiva och för dig som blir trött av stillasittande arbete.</p>
-        </div>
-      </div>
-
-      <!-- Honungsmassage (ben/lår/mage) -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Honungsmassage ben/lår/mage"></figure>
-        <div>
-          <h3>Honungsmassage – ben/lår/mage</h3>
-          <p>Intensiv metod som stimulerar blodcirkulation och lymfflöde, hjälper till att minska celluliter samt göra huden fastare och mer elastisk. Känns kraftfull, men ger tydligt uppfriskande resultat.</p>
-        </div>
-      </div>
-
-      <!-- Honungsmassage (rygg/armar/mage) -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Honungsmassage rygg/armar/mage"></figure>
-        <div>
-          <h3>Honungsmassage – rygg/armar/mage</h3>
-          <p>En riktad, intensiv behandling för överkroppen med samma fördelar: aktiverat lymfflöde, ökad cirkulation och en fastare hudkänsla.</p>
-        </div>
-      </div>
-
-      <!-- Vakummassage med silikonkoppar -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Vakuummassage med silikonkoppar"></figure>
-        <div>
-          <h3>Vakuummassage med silikonkoppar</h3>
-          <p>Avslappnande men djup stimulerande metod som förbättrar blodcirkulation och lymfdränage, minskar svullnader och känsla av tyngd samt bidrar till fastare, mer elastisk hud. Upplev lättnad i kroppen och skön stressreduktion.</p>
-        </div>
-      </div>
-
-      <!-- Gua Sha massage (ansikte) -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Gua Sha ansiktsmassage"></figure>
-        <div>
-          <h3>Gua Sha-massage (ansikte)</h3>
-          <p>Österländsk teknik med släta naturstenar och närande oljor. Lätta, glidande rörelser löser upp spänningar, stimulerar hudförnyelse och ger frisk lyster. Innehåller arbete på trapezius, dekolletage och nacke, pumpning av 22 bioaktiva punkter i ansiktet, ansiktsmassage för lyft och djup avslappning samt avslutande huvudmassage.</p>
-          <ul>
-            <li>Jämnare hudton och tydligare kontur</li>
-            <li>Minskade svullnader och mörka ringar</li>
-            <li>Skön stresslindring och inre balans</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Ultraljudsbehandling Weyergans -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Ultraljudsbehandling Weyergans Simply Red"></figure>
-        <div>
-          <h3>Ultraljudsbehandling – US Handy Weyergans</h3>
-          <p>Innovativ behandling som kombinerar ultraljud (1&nbsp;MHz) med professionell kosmetik från Weyergans Simply Red. Ger mikromassage på vävnadsnivå, förbättrar mikrocirkulation och lymfdränage, stimulerar kollagen och ökar hudens fasthet. Sonoforés förstärker upptaget av aktiva ämnen för anti-cellulit, uppstramning och föryngrande effekt.</p>
-          <p><strong>Så går det till:</strong> Kontaktgel appliceras och de valda områdena behandlas med US Handy för behaglig värme och lätt vibration medan huden tillförs aktiva ingredienser.</p>
-          <p><strong>Kontraindikationer:</strong> Ej under graviditet eller vid hjärt-kärlsjukdom, tumörer, inflammationer, akuta infektioner/feber; undvik områden som hjärta, huvud, skadad hud och könsorgan.</p>
-        </div>
-      </div>
-
-      <!-- Vaxning (beskrivning utan pris) -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Vaxning"></figure>
-        <div>
-          <h3>Vaxning</h3>
-          <p>Effektiv och säker metod med varm vax för långvarigt slät hud. För bästa resultat rekommenderas hårlängd 5–7&nbsp;mm. Vi använder endast professionella produkter; allt material är engångs och noggrann desinfektion utförs efter varje kund.</p>
-          <ul>
-            <li>Slät hud i 3–4&nbsp;veckor</li>
-            <li>Mjukare hårstrån med långsammare återväxt</li>
-            <li>Passar både ansikte och kropp</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Estetisk tejpning (lymftape) -->
-      <div class="treatment">
-        <figure><img src="img/placeholder.jpg" alt="Estetisk lymftape"></figure>
-        <div>
-          <h3>Estetisk tejpning (lymftape)</h3>
-          <p>Skonsam men effektiv metod för att aktivera lymfflödet, minska svullnader och förbättra hudens spänst. Tejperna appliceras varsamt på problemområden och arbetar för dig hela dygnet – ger mjuk lymfmassage vid varje rörelse och hjälper till att hålla kroppen i form utan smärta och ansträngning.</p>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Gua Sha -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/guasha.jpg" alt="Gua Sha massage"></div>
+      <div class="behandling-text">
+        <h3>Gua Sha-massage – strålande hud och balans</h3>
+        <p>En urgammal teknik med stenar av naturmaterial och oljor. Behandlingen löser upp spänningar, stimulerar hudens förnyelse och ger ansiktet frisk lyster. Inkluderar behandling av nacke, dekolletage och biologiskt aktiva punkter i ansiktet.</p>
+      </div>
+    </div>
+
+    <!-- Klassisk massage helkropp -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/klassisk-helkropp.jpg" alt="Klassisk helkroppsmassage"></div>
+      <div class="behandling-text">
+        <h3>Klassisk svensk helkroppsmassage</h3>
+        <p>En av de mest populära massageformerna. Den verkar mjukt men djupt på musklerna, förbättrar cirkulationen, lindrar stress och återställer kroppens energi.</p>
+      </div>
+    </div>
+
+    <!-- Klassisk ryggmassage -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/klassisk-rygg.jpg" alt="Klassisk ryggmassage"></div>
+      <div class="behandling-text">
+        <h3>Klassisk svensk ryggmassage</h3>
+        <p>En kortare variant med fokus på rygg och axlar. Perfekt för snabb avkoppling och lindring av spänningar.</p>
+      </div>
+    </div>
+
+    <!-- Honungsmassage ben -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/honung-ben.jpg" alt="Honungsmassage ben"></div>
+      <div class="behandling-text">
+        <h3>Honungsmassage – ben och mage</h3>
+        <p>En intensiv behandling som stimulerar blodcirkulation och lymfflöde, minskar celluliter och gör huden fastare och mer elastisk.</p>
+      </div>
+    </div>
+
+    <!-- Honungsmassage rygg -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/honung-rygg.jpg" alt="Honungsmassage rygg"></div>
+      <div class="behandling-text">
+        <h3>Honungsmassage – rygg, armar och mage</h3>
+        <p>En intensiv metod som ökar blodcirkulationen, stärker huden och hjälper till att minska celluliter.</p>
+      </div>
+    </div>
+
+    <!-- Vakummassage -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/vakummassage.jpg" alt="Vakummassage"></div>
+      <div class="behandling-text">
+        <h3>Vakummassage med silikonkoppar</h3>
+        <p>Förbättrar blodcirkulation och lymfdränage, minskar celluliter och svullnader. Ger en känsla av lätthet och avkoppling.</p>
+      </div>
+    </div>
+
+    <!-- Ultraljudsbehandling -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/ultraljud.jpg" alt="Ultraljudsbehandling"></div>
+      <div class="behandling-text">
+        <h3>Ultraljudsbehandling – Weyergans Simply Red</h3>
+        <p>En innovativ behandling med ultraljudsteknik som förbättrar blodcirkulation, stimulerar kollagen och reducerar celluliter. Ger huden fasthet och lyster.</p>
+      </div>
+    </div>
+
+    <!-- Medicinsk pedikyr -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/pedikyr.jpg" alt="Medicinsk pedikyr"></div>
+      <div class="behandling-text">
+        <h3>Medicinsk pedikyr hos podolog</h3>
+        <p>Professionell behandling som avlägsnar förhårdnader, liktornar och sprickor, förebygger svampinfektioner och återställer fötternas hälsa. Alla instrument steriliseras enligt medicinska standarder.</p>
+      </div>
+    </div>
+
+    <!-- Estetisk tejpning -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/tejpning.jpg" alt="Estetisk tejpning"></div>
+      <div class="behandling-text">
+        <h3>Estetisk lymftape för kroppen</h3>
+        <p>En skonsam metod som aktiverar lymfflödet och förbättrar kroppens konturer. Tejperna appliceras på problemområden och ger effekten av lymfmassage vid varje rörelse.</p>
+      </div>
+    </div>
+
+    <!-- Vaxning -->
+    <div class="behandling">
+      <div class="behandling-image"><img src="img/vaxning.jpg" alt="Vaxning"></div>
+      <div class="behandling-text">
+        <h3>Vaxning</h3>
+        <p>Effektiv och skonsam metod för att ta bort oönskat hår. Ger silkeslen hud i upp till 4 veckor. Endast professionella produkter och engångsmaterial används.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
